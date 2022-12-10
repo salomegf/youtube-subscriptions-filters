@@ -1,0 +1,72 @@
+html[darker-dark-theme],
+[darker-dark-theme] [light] {
+    --text: #0f0f0f;
+    --active: #fff;
+    --background: rgba(0, 0, 0, 0.05);
+    --hover: rgba(0, 0, 0, 0.1);
+    --hoverActive: #030303;
+}
+
+html[darker-dark-theme][dark],
+[darker-dark-theme] [dark] {
+    --active: #0f0f0f;
+    --text: #f1f1f1;
+    --background: rgba(255, 255, 255, 0.1);
+    --hover: rgba(255, 255, 255, 0.2);
+    --hoverActive: #fff;
+}
+
+div#items.videos ytd-grid-video-renderer:has(a[href*="/shorts/"]) {
+    display: none !important;
+}
+
+div#items.shorts ytd-grid-video-renderer:has(a[href*="/watch"]) {
+    display: none !important;
+}
+
+div#btnsCustom+div#contents {
+    margin-top: 56px;
+}
+
+#btnsCustom {
+    position: fixed;
+    width: 100%;
+    height: 56px;
+    background-color: var(--active);
+    overflow: hidden;
+    z-index: 1000;
+}
+
+
+button.btnCustom {
+    border-radius: 8px;
+    border: none;
+    margin: 12px;
+    margin-left: 0;
+    color: var(--text);
+    background-color: var(--background);
+    height: 32px;
+    min-width: 12px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2rem;
+    /* transition: background-color 0.5s cubic-bezier(0.05,0,0,1); */
+}
+
+button.btnCustom.active {
+    background-color: var(--text);
+    color: var(--active);
+}
+
+button.btnCustom:hover {
+    background-color: var(--hover);
+}
+
+button.btnCustom.active:hover {
+    background-color: var(--hoverActive);
+}
