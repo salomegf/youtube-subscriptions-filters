@@ -2,6 +2,8 @@
 
 This is a boost for Arc that allows you to filter your YouTube subscriptions by videos or shorts or all.
 
+![screenshot](./screenshot.png)
+
 ## Installation
 
 1. Open https://www.youtube.com
